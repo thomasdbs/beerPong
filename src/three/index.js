@@ -36,8 +36,8 @@ camera.position.set(-15, 30, 95);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 // axis helper
-const axisHelper = new THREE.AxisHelper(100);
-scene.add(axisHelper);
+// const axisHelper = new THREE.AxisHelper(100);
+// scene.add(axisHelper);
 
 //Lumiere ambiante
 const light = new THREE.AmbientLight(0x888888);
