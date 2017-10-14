@@ -184,6 +184,52 @@ scene.add(terrain);
 scene.add(verres);
 scene.add(balles);
 
+const speed = 120;
+const angle = 0;
+let direction= '-';
+
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+const handleClick = e => {
+	e.preventDefault();
+	mouse.x = e.clientX / window.innerWidth * 2 - 1;
+	mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+	raycaster.setFromCamera(mouse, camera);
+	const intersects = raycaster.intersectObjects(balles.children);
+	if (intersects.length > 0 && intersects[0].object.uuid === balle.uuid) {
+		TweenMax.to(balle.position, 0.9, {
+			x: angle,
+			z: `${direction}=${speed}`,
+		});
+		TweenMax.to(balle.position, 0.6, {
+			y: '3',
+			ease: Power2.easeIn,
+		}).delay(0.3);
+		const interval = setTimeout(() => {
+			if (balle.position.y <=3 && balle.position.z < 0) {
+				// TweenMax.to(camera.position, 2, {
+				// 	x: '15',
+				// 	y: '30',
+				// 	z: `-95`,
+				// });
+				balle.position.set(0,20,-60);
+				direction='+';
+			}else if (balle.position.y <=3 && balle.position.z > 0) {
+				// TweenMax.to(camera.position, 2, {
+				// 	x: '-15',
+				// 	y: '30',
+				// 	z: `95`,
+				// });
+				balle.position.set(0,20,60);
+				direction='-';
+			}
+		}, 1000);
+
+// -15, 30, 95
+	}
+};
+addEventListener('click', handleClick);
+
 
 // function trajectoire(angle, speed){
 // 	TweenMax.to(balle.position, 0.9, {
