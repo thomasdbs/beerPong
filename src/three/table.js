@@ -12,21 +12,27 @@ export default () => {
 
     const group = new THREE.Group();
 
-    const geometryTable = new THREE.PlaneGeometry(100, 180, 32, 32);
+    const largeurTable = 100;
+    const longueurTable = 180;
+    const epaisseurBandes = 2;
+    const hauteurFilet = 8;
+    const rotation = Math.PI / 2;
+
+    const geometryTable = new THREE.PlaneGeometry(largeurTable, longueurTable, 1, 1);
     const table = new THREE.Mesh(geometryTable, material(0x3CB371));
-    table.rotation.x = Math.PI / 2;
+    table.rotation.x = rotation;
     table.receiveShadow = true;
 
-    const geometryBandes = new THREE.PlaneGeometry(2, 180, 32, 32);
+    const geometryBandes = new THREE.PlaneGeometry(epaisseurBandes, longueurTable, 1, 1);
     const bandes = new THREE.Mesh(geometryBandes, material(0xFFFFFF));
-    bandes.rotation.x = Math.PI / 2;
+    bandes.rotation.x = rotation;
     bandes.position.y = 0.1;
     bandes.receiveShadow = true;
 
-    const geometryFilet = new THREE.PlaneGeometry(8, 100, 32, 32);
+    const geometryFilet = new THREE.PlaneGeometry(hauteurFilet, largeurTable, 1, 1);
     const filet = new THREE.Mesh(geometryFilet, material(0xFFFFFF));
-    filet.rotation.z = - Math.PI / 2;
-    filet.position.y = 4;
+    filet.rotation.z = -rotation;
+    filet.position.y = hauteurFilet/2;
     filet.receiveShadow = true;
 
     //Ajout au groupe
