@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Three JS BeerPong</title>
-    </head>
-    <body>
-    <script type="text/javascript" src="bundle.js"></script></body>
+<head>
+    <meta charset="utf-8">
+    <title>Three JS BeerPong</title>
+</head>
+<body style="display:none;">
+    <div  id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>
+                Quoi ? Les couleurs changent ?
+                <br>
+                Vous avez sûrement un peu abusé sur la boisson, il serait peut-être temps d'arrêter...
+            </p>
+        </div>
+    </div>
+    <div class="score j1">
+        <h4>Joueur 1</h4>
+        <h2 id="j1">0</h2>
+        <h3>g</h3>
+        <h4 id="indicationJ1"></h4>
+        <img id="imgJ1" src="img/wait.png" alt="">
+    </div>
+    <div class="score j2">
+        <h4>Joueur 2</h4>
+        <h2 id="j2">0</h2>
+        <h3>g</h3>
+        <h4 id="indicationJ2"></h4>
+        <img id="imgJ2" src="img/bottleCap.png" alt="">
+    </div>
+    <!-- <div class="score indicationJ1">
+        <h4>Statut</h4>
+    </div>
+    <div class="score indicationJ2">
+        <h4>Statut</h4>
+    </div>-->
+    <div class="score resultat">
+        <h4 id="resultat"></h4>
+        <img id="imgResultat" src="img/best.png" alt="">
+    </div>
+<script type="text/javascript" src="bundle.js"></script></body>
 </html>
