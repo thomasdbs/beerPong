@@ -1,6 +1,6 @@
 ## Preview
 
-https://hhochart29.github.io/sockanvas
+https://thomasdbs.github.io/beerPong
 
 ## Install :
 

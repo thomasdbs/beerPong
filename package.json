@@ -1,5 +1,5 @@
 {
-  "name": "sockanvas",
+  "name": "beerPong",
   "version": "1.0.0",
   "description": "Table et verres de BeerPong",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hhochart29/sockanvas"
+    "url": "git+https://github.com/thomasdbs/beerPong"
   },
   "author": "Thomas Dubois",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hhochart29/sockanvas/issues"
+    "url": "https://github.com/thomasdbs/beerPong/issues"
   },
-  "homepage": "https://github.com/hhochart29/sockanvas#readme",
+  "homepage": "https://github.com/thomasdbs/beerPong#readme",
   "devDependencies": {
     "css-loader": "^0.28.7",
     "file-loader": "^0.11.2",
