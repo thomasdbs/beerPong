@@ -1,8 +1,14 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-const plugins = [new HtmlWebpackPlugin({template: 'src/three/index.html'})];
+const plugins = [
+    new HtmlWebpackPlugin({template: 'src/three/index.html'}),
+    new webpack.ProvidePlugin({
+    		THREE: 'three',
+    	}),
+    ];
 
 if (process.env.NODE_ENV === 'production') {
     plugins.push(new UglifyJSPlugin());

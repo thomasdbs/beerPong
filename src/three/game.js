@@ -8,6 +8,7 @@ const material = color => new THREE.MeshPhongMaterial({
     flatShading: true,
 });
 
+
 export default () => {
 
     const group = new THREE.Group();

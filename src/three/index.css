@@ -1,5 +1,84 @@
 canvas {display: block;}
-body {
-    margin: 0;
-    padding: 0;
+body {margin: 0;padding: 0;}
+
+.score {
+    position: absolute;
+    width:fit-content;
+    width:-moz-fit-content;
+    text-align: center;
+    background-color: #3CB371;
+    padding:10px;
+    border-radius:5px;
+    color: #FFFFFF;
 }
+
+.j1 {
+    margin-top: 20px;
+    left: 20px;
+}
+
+.j2 {
+    right: 20px;
+    margin-top: 20px;
+}
+
+.indicationJ1 {
+    margin-top: 140px;
+    left: 20px;
+}
+
+.indicationJ2 {
+    right: 20px;
+    margin-top: 140px;
+}
+
+.resultat {
+    display: none;
+    margin-top: 20px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h4{ margin: 0;}
+h2,h3{display: inline-block; margin-top: 0.5em;margin-bottom: 0.5em;}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border-radius:5px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img{margin-top: 5px;max-width: 100%;}

@@ -8,8 +8,8 @@ export default () => {
     const x = 0;
     const y = 40;
     const z = 100;
-    const distance = 200;
-    const decay = 2;
+    const distance = 280;
+    const decay = 3;
     const penombre = 0.9;
 
     const spotLight1 = new THREE.SpotLight(0x88aa88);
